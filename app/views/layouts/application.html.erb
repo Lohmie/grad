@@ -10,6 +10,23 @@
   </head>
 
   <body>
+  <ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" href="/">Pokecenter</a>
+  </li>
+  <% if user_signed_in? %>
+  <li class="nav-item">
+    <%=link_to "Sign Out", destroy_user_session_path, class: "nav-link", method: :delete%>
+  </li>
+  <% else %>
+  <li class="nav-item">
+    <a class="nav-link" href=<%=new_user_session_path%>>Sign In</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href=<%=new_user_registration_path%>>Sign Up</a>
+  </li>
+  <% end %>
+</ul>
     <%= yield %>
   </body>
 </html>

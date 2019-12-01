@@ -66,3 +66,5 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 
 gem 'poke-api-v2'
+
+gem 'devise'
